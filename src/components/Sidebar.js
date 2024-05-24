@@ -5,7 +5,7 @@ import { Drawer, List, ListItem, ListItemText } from '@material-ui/core';
 
 const Sidebar = () => {
   return (
-    <Drawer variant="permanent" anchor="left">
+    <Drawer position="relative" variant="permanent" anchor="right">
       <List>
         <ListItem button component={Link} to="/">
           <ListItemText primary="Home" />

@@ -10,6 +10,7 @@ const Dashboard = () => {
         <Grid item xs={12}>
           <Paper>
             <Chart />
+	    <Chart/>
           </Paper>
         </Grid>
         {/* Add more components here */}

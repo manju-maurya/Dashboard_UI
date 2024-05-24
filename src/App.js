@@ -9,14 +9,18 @@ import Dashboard from './components/Dashboard';
 import HomePage from './pages/HomePage';
 import ReportsPage from './pages/ReportsPage';
 import SettingsPage from './pages/SettingsPage';
+import Dash1 from './components/Dash1';
+
 
 const App = () => {
   return (
     <Router>
       <CssBaseline />
       <Navbar />
+	  <Dash1/>
       <div style={{ display: 'flex' }}>
-        //<Sidebar />
+      <Sidebar/>
+	  <HomePage/>
         <main style={{ flexGrow: 1, padding: '16px' }}>
           <Routes>
             <Route path="/" element={<HomePage />} />

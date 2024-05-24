@@ -1,0 +1,33 @@
+// src/components/Dashboard.js
+import React, { useState, useEffect } from 'react';
+import Chart from './Chart';
+
+const sampleData = [
+  { name: 'Jan', value: 400 },
+  { name: 'Feb', value: 300 },
+  { name: 'Mar', value: 200 },
+  { name: 'Apr', value: 278 },
+  { name: 'May', value: 189 },
+];
+
+const Dash1 = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(sampleData);
+  }, []);
+
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <Chart data={data} />
+	  <Chart data={data} />
+	  <Chart data={data} />
+	  <Chart data={data} />
+	  <Chart data={data} />
+    </div>
+  );
+};
+
+export default Dash1;
+
