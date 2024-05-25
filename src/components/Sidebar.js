@@ -2,10 +2,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Drawer, List, ListItem, ListItemText } from '@material-ui/core';
-
+import './a.css';
 const Sidebar = () => {
   return (
-    <Drawer position="relative" variant="permanent" anchor="right">
+    <Drawer top="20px" variant="permanent" anchor="right">
       <List>
         <ListItem button component={Link} to="/">
           <ListItemText primary="Home" />

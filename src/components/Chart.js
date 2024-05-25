@@ -4,7 +4,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Responsi
 
 const Chart = ({ data }) => {
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width="25%" height={200}>
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />

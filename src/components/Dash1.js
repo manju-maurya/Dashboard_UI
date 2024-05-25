@@ -10,11 +10,22 @@ const sampleData = [
   { name: 'May', value: 189 },
 ];
 
+const sampleData2 = [
+  { name: 'Jan', value: 10 },
+  { name: 'Feb', value: 200 },
+  { name: 'Mar', value: 200 },
+  { name: 'Apr', value: 78 },
+  { name: 'May', value: 189 },
+];
+
+
 const Dash1 = () => {
   const [data, setData] = useState([]);
+const [data2, setData2] = useState([]);
 
   useEffect(() => {
     setData(sampleData);
+    setData2(sampleData2);
   }, []);
 
   return (
@@ -22,7 +33,7 @@ const Dash1 = () => {
       <h1>Dashboard</h1>
       <Chart data={data} />
 	  <Chart data={data} />
-	  <Chart data={data} />
+	  <Chart data={data2} />
 	  <Chart data={data} />
 	  <Chart data={data} />
     </div>
