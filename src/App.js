@@ -15,11 +15,12 @@ const App = () => {
 	  <Top/>
 	  <New/>
 	  <New2/>
-	  <GraphWidget/>
         <main style={{ flexGrow: 1, padding: 3 }}>
           <Toolbar />
           <Typography paragraph>
 	  Hello
+	  <GraphWidget/>
+	  <GraphWidget/>
             {/* Main content goes here */}
           </Typography>
         </main>
