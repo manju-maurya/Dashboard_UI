@@ -1,7 +1,7 @@
 import react from 'react';
 import {Drawer, Toolbar, List, ListItem,Link,ListItemText} from '@mui/material';
 
-const New2 =()=>{
+const SideBar =()=>{
 	
 	return(
 <Drawer
@@ -27,5 +27,5 @@ const New2 =()=>{
         </Drawer>
 	);
 };
-export default New2;
+export default SideBar;
 

@@ -32,7 +32,7 @@ const GraphWidget = () => {
   };
 
 return (
-    <div style={{ width: '600px', height: '400px' }}>
+    <div style={{ width: '600px', height: '300px' }}>
       <Line data={data} options={options} />
     </div>
 )

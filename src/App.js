@@ -1,10 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemText, CssBaseline } from '@mui/material';
-import New from './New.js';
-import New2 from './New2.js';
-import Top from './Top.js';
+import BottomNav from './BottomNav.js';
+import SideBar from './SideBar.js';
+import TopNav from './TopNav.js';
 import GraphWidget from './GraphWidget.js';
+import BarChart from './BarChart.js';
+import DoughnutChart from './DoughnutChart.js';
+import PieChart from './PieChart';
+
 const drawerWidth = 240;
 
 const App = () => {
@@ -12,15 +16,21 @@ const App = () => {
     <Router>
       <div style={{ display: 'flex' }}>
         <CssBaseline />
-	  <Top/>
-	  <New/>
-	  <New2/>
+	  <TopNav/>
+	  <BottomNav/>
+	  <SideBar/>
         <main style={{ flexGrow: 1, padding: 3 }}>
           <Toolbar />
           <Typography paragraph>
 	  Hello
+	  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
 	  <GraphWidget/>
+	  <BarChart/>
 	  <GraphWidget/>
+	  <PieChart/>
+	  <BarChart/>
+	  <DoughnutChart/>
+	  </div>
             {/* Main content goes here */}
           </Typography>
         </main>
