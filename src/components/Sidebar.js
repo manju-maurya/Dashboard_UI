@@ -1,11 +1,11 @@
-// src/components/Sidebar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Drawer, List, ListItem, ListItemText } from '@material-ui/core';
-import './a.css';
+import { Drawer, List, ListItem, ListItemText } from '@mui/material';
+
 const Sidebar = () => {
   return (
-    <Drawer top="20px" variant="permanent" anchor="right">
+    <Drawer variant="permanent" anchor="left" sx={{ marginTop: 64 }}>
+      {/* Correct syntax for JSX comments */}
       <List>
         <ListItem button component={Link} to="/">
           <ListItemText primary="Home" />
