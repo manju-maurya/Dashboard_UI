@@ -8,6 +8,8 @@ import GraphWidget from './GraphWidget.js';
 import BarChart from './BarChart.js';
 import DoughnutChart from './DoughnutChart.js';
 import PieChart from './PieChart';
+import InfiniteScrollComponent from './InfiniteScrollComponent.js';
+
 
 const drawerWidth = 240;
 
@@ -24,12 +26,20 @@ const App = () => {
           <Typography paragraph>
 	  Hello
 	  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+	<  InfiniteScrollComponent/>
+
 	  <GraphWidget/>
 	  <BarChart/>
 	  <GraphWidget/>
 	  <PieChart/>
+	  <  InfiniteScrollComponent/>
 	  <BarChart/>
 	  <DoughnutChart/>
+
+	  <  InfiniteScrollComponent/>
+	  <  InfiniteScrollComponent/>
+	  <  InfiniteScrollComponent/>
+
 	  </div>
             {/* Main content goes here */}
           </Typography>
