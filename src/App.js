@@ -9,7 +9,7 @@ import BarChart from './BarChart.js';
 import DoughnutChart from './DoughnutChart.js';
 import PieChart from './PieChart';
 import InfiniteScrollComponent from './InfiniteScrollComponent.js';
-
+import Scroll from './Scroll.js';
 
 const drawerWidth = 240;
 
@@ -27,7 +27,8 @@ const App = () => {
 	  Hello
 	  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
 	<  InfiniteScrollComponent/>
-
+	  <Scroll/>
+	<Scroll/>
 	  <GraphWidget/>
 	  <BarChart/>
 	  <GraphWidget/>
@@ -36,9 +37,6 @@ const App = () => {
 	  <BarChart/>
 	  <DoughnutChart/>
 
-	  <  InfiniteScrollComponent/>
-	  <  InfiniteScrollComponent/>
-	  <  InfiniteScrollComponent/>
 
 	  </div>
             {/* Main content goes here */}
