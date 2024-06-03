@@ -28,7 +28,7 @@ const App = () => {
 	  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
 	<  InfiniteScrollComponent/>
 	  <Scroll/>
-	<Scroll/>
+	  <Scroll/>
 	  <GraphWidget/>
 	  <BarChart/>
 	  <GraphWidget/>

@@ -31,12 +31,12 @@ const Scroll = () => {
       setPage((prevPage) => prevPage + 1);
     }
   };
-
+  console.log("HEre::",lastItemRef.current)
   useEffect(() => {
     if (observer.current) observer.current.disconnect();
     observer.current = new IntersectionObserver(handleObserver);
     if (lastItemRef.current) observer.current.observe(lastItemRef.current);
-  }, [hasMore, loading]);
+  }, []);
 
   useEffect(() => {
     if (page > 1) loadItems(page);
