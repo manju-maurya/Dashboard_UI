@@ -10,6 +10,7 @@ import DoughnutChart from './DoughnutChart.js';
 import PieChart from './PieChart';
 import InfiniteScrollComponent from './InfiniteScrollComponent.js';
 import Scroll from './Scroll.js';
+import New from './New.js'
 
 const drawerWidth = 240;
 
@@ -26,8 +27,12 @@ const App = () => {
           <Typography paragraph>
 	  Hello
 	  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+	  <New widgetId="chart3"/>
+	  <New widgetId="chart4"/>
 	<  InfiniteScrollComponent/>
 	  <Scroll/>
+	  <New widgetId="chart1"/>
+	  <New widgetId="chart2"/>
 	  <Scroll/>
 	  <GraphWidget/>
 	  <BarChart/>
