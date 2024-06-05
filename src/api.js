@@ -1,10 +1,19 @@
 export const fetchData = async (page, limit) => {
-	 const response = await fetch(`http://localhost:3001/data?page=1&limit=5`);
-   console.log("response:",response.json)
-  const result = await response.json();
-  console.log("result :",result)
-  console.log("result data:",result.data)
-  return result.data;
-  
+  const response = await fetch(`http://localhost:3001/api/items?page=${page}&limit=${limit}`);
+  const data = await response.json();
+  return data;
 };
 
+export const saveData = async (item) => {
+  const response = await fetch('http://localhost:3001/api/items', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(item),
+  });
+  const data = await response.json();
+
+  
+  return data;
+};

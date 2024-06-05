@@ -30,6 +30,7 @@ const ChartComponent = ({ widgetId }) => {
   const [chartType, setChartType] = useState(
     localStorage.getItem(`selectedChartType-${widgetId}`) || 'bar'
   );
+
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const chartTypes = ['bar', 'line', 'pie', 'doughnut'];
@@ -41,7 +42,7 @@ const ChartComponent = ({ widgetId }) => {
   const [loading, setLoading] = useState(false);
   const observer = useRef();
 
-  const ITEMS_PER_PAGE = 10; // Number of items to load per page
+  const ITEMS_PER_PAGE = 5; // Number of items to load per page
 
   const loadItems = async (page) => {
     setLoading(true);
@@ -81,8 +82,25 @@ const ChartComponent = ({ widgetId }) => {
         label: 'My Data',
         data: items.map((item) => item.value),
         fill: false,
-        backgroundColor: 'rgba(75,192,192,0.2)',
-        borderColor: 'rgba(75,192,192,1)',
+        // backgroundColor: 'rgba(75,192,192,0.2)',
+        // borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          
+        ],
+        borderWidth: 1,
       },
     ],
   };
@@ -119,7 +137,7 @@ const ChartComponent = ({ widgetId }) => {
         <ul
           style={{
             listStyleType: 'none',
-            padding: 0,
+            padding: 1,
             position: 'absolute',
             top: '7%',
             left: 0,

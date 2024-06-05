@@ -29,10 +29,10 @@ const App = () => {
 	  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
 	  <New widgetId="chart3"/>
 	  <New widgetId="chart4"/>
-	<  InfiniteScrollComponent/>
-	  <Scroll/>
 	  <New widgetId="chart1"/>
 	  <New widgetId="chart2"/>
+	  <  InfiniteScrollComponent/>
+	  <Scroll/>
 	  <Scroll/>
 	  <GraphWidget/>
 	  <BarChart/>
