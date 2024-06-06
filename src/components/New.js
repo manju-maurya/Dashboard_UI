@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
+import { Bar, Line, Pie, Doughnut,Radar,PolarArea,Bubble,Scatter,Chart } from 'react-chartjs-2';
 import { fetchData } from './api'; // Import the API function
 import {
   Chart as ChartJS,
@@ -13,6 +13,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+
 
 ChartJS.register(
   CategoryScale,
@@ -33,7 +34,7 @@ const ChartComponent = ({ widgetId }) => {
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
-  const chartTypes = ['bar', 'line', 'pie', 'doughnut'];
+  const chartTypes = ['bar', 'line', 'pie', 'doughnut',];
 
   // For Lazy loading
   const [items, setItems] = useState([]);
@@ -109,12 +110,12 @@ const ChartComponent = ({ widgetId }) => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: 'bottom',
       },
-      title: {
-        display: true,
-        text: 'Monthly Sales Data',
-      },
+      // title: {
+      //   display: true,
+      //   // text: 'Monthly Sales Data',
+      // },
     },
   };
 
@@ -129,19 +130,22 @@ const ChartComponent = ({ widgetId }) => {
   };
 
   return (
-    <div style={{ position: 'relative', display: 'inline-block' }}>
-      <button onClick={toggleDropdown} style={{ padding: '5px' }}>
-        Select Chart Type
-      </button>
+    <div style={{ position: 'relative', display: 'inline-block', border:'1px solid #d7d7d7', padding:2, borderRadius:2, backgroundColor:'#f1efef'}}>
+
+     <div style={{display:'flex'}}>
+      <button onClick={toggleDropdown} style={{ padding: '5px', margin:3, border:'none' }}> ⋮ </button>
+      <h4 style={{margin:'auto', color:'#595656'}}>Monthly Sales Data</h4>
+      </div>
+
       {dropdownVisible && (
         <ul
           style={{
             listStyleType: 'none',
-            padding: 1,
+            padding: 5,
             position: 'absolute',
-            top: '7%',
+            top: '10%',
             left: 0,
-            backgroundColor: '#f0f0f0',
+            backgroundColor: 'rgb(250 246 246)',
             margin: 0,
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             zIndex: 1,
@@ -151,20 +155,19 @@ const ChartComponent = ({ widgetId }) => {
             <li
               key={type}
               onClick={() => handleChartTypeChange(type)}
-              style={{ cursor: 'pointer', padding: '10px 20px' }}
+              style={{ cursor: 'pointer', padding: '4px 4px', textDecoration:'2', hover:{backgroundColor:'red'} }}
             >
               {type.charAt(0).toUpperCase() + type.slice(1)} Chart
             </li>
           ))}
         </ul>
       )}
-      <div style={{ width: '600px', height: '400px', marginTop: '20px' }}>
-        {chartType === 'bar' && <Bar data={chartData} options={options} />}
-        {chartType === 'line' && <Line data={chartData} options={options} />}
+      <div style={{ width: '400px', height: '300px', margin:'auto', display:'flex', justifyContent:'center', flexWrap:'inherit', marginTop:10}}>
+        {chartType === 'bar' && <Bar data={chartData} options={options} style={{marginTop:30}}/>}
+        {chartType === 'line' && <Line data={chartData} options={options} style={{marginTop:30}}/>}
         {chartType === 'pie' && <Pie data={chartData} options={options} />}
-        {chartType === 'doughnut' && (
-          <Doughnut data={chartData} options={options} />
-        )}
+        {chartType === 'doughnut' && (<Doughnut data={chartData} options={options} /> )}
+       
       </div>
     </div>
   );

@@ -17,23 +17,31 @@ import New from './components/New.js'
 const App = () => {
   return (
     <Router>
-      <div style={{ display: 'flex' }}>
+      <div style={{  }}>
 	 	 <TopNav/>
 	 	 <BottomNav/>
 	 	 <SideBar/>
-
-         <main style={{ flexGrow: 1, padding: 5 }}>
+         <main style={{ paddingLeft:40, flexGrow: 1, padding: 5, backgroundColor:'#f7f7f7', display:'flex' , justifyContent:'center'}}>
            <Toolbar />
-           <Typography paragraph>
-	  			Hello
-	  	    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '50px' }}>
+           <Typography paragraph style={{marginTop:65}}>
+	  			<h1 style={{display:'flex', justifyContent:'center'}}>Sales Data </h1>
+	  	    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px',  justifyContent:'center', }}>
 
 	  		<New widgetId="chart3"/>
 	  		<New widgetId="chart4"/>
 	  		<New widgetId="chart1"/>
 	  		<New widgetId="chart2"/>
 
-	  		<InfiniteScrollComponent/>
+			  <New widgetId="chart33"/>
+	  		<New widgetId="chart44"/>
+	  		<New widgetId="chart11"/>
+	  		<New widgetId="chart22"/>
+			  <New widgetId="chart333"/>
+	  		<New widgetId="chart444"/>
+	  		<New widgetId="chart111"/>
+	  		
+
+	  		{/* <InfiniteScrollComponent/>
 	 		<Scroll/>
 	 		<Scroll/>
 	 		<GraphWidget/>
@@ -42,7 +50,7 @@ const App = () => {
 	 		<PieChart/>
 	  		<InfiniteScrollComponent/>
 	 		<BarChart/>
-	 		<DoughnutChart/>
+	 		<DoughnutChart/> */}
 
 	      </div>
           </Typography>

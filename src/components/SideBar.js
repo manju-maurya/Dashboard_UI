@@ -7,9 +7,9 @@ const SideBar =()=>{
 <Drawer
           variant="permanent"
           sx={{
-            width: 90,
+            width: 110,
             flexShrink: 0,
-            [`& .MuiDrawer-paper`]: { width: 90, boxSizing: 'border-box', marginTop: '5%' },
+            [`& .MuiDrawer-paper`]: { width: 110, boxSizing: 'border-box', marginTop: '5%' },
           }}
         >
           <Toolbar />
